@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class RegistrationComponent {
   
-  text: string = "Hello World"
+  user = {
+    name: '',
+    email: '',
+    password: '',
+    bio: ''
+  };
 
+  register() {
+    console.log('User Registered:', this.user);
+  }
 }
