@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UserProfileService } from '../user-profile.service';
-import { error } from 'console';
 
 @Component({
   selector: 'app-profile',
@@ -17,11 +16,13 @@ export class ProfileComponent implements OnInit {
   ngOnInit(): void {
     this.userProfileService.getUserProfile().subscribe(
       response => {
-        this.userProfile = response
-      }, error => {
-        console.error('Error Fetching user profile: ', error)
+        this.userProfile = response;
+      },
+      error => {
+        console.error('Error fetching profile:', error); 
+        throw new Error('Error fetching profile');  
       }
-    )
+    );
   }
 
 }

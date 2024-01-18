@@ -12,7 +12,7 @@ import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component'; 
 import { AuthGuard } from './auth.guard';
-import { HttpClientModule, HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
 import { RegistrationStatusService } from './registration/registration-status.service';
 
 @NgModule({
