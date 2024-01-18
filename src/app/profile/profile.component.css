@@ -1,0 +1,27 @@
+.profile-card {
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .header {
+    background-color: #2196f3;
+    color: #fff;
+  }
+
+  .name {
+    margin-bottom: 12px;
+  }
+  
+  .email {
+    margin-top: 8px; 
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+  
+  .bio {
+    margin-bottom: 8px;
+    font-size: 16px;
+  }

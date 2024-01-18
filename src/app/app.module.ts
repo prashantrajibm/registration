@@ -9,12 +9,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
-import { FormsModule } from '@angular/forms'; // Import FormsModule
+import { FormsModule } from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component'; 
+import { AuthGuard } from './auth.guard';
+import { HttpClientModule, HttpClient, provideHttpClient, withFetch } from '@angular/common/http';
+import { RegistrationStatusService } from './registration/registration-status.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -23,9 +28,13 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
+    AuthGuard,
+    provideHttpClient(withFetch()),
+    RegistrationStatusService,
     provideClientHydration()
   ],
   bootstrap: [AppComponent]
